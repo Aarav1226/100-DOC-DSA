@@ -18,7 +18,6 @@ Output:
 Explanation: Swap pairs from both ends: (1,5), (2,4), middle 3 stays
 */
 #include <stdio.h>
-
 int main() {
     int n;
     printf("Enter number of elements: ");
@@ -39,8 +38,6 @@ int main() {
     printf("\n");
 
     while (left < right) {
-        
-
         int temp = arr[left];
         arr[left] = arr[right];
         arr[right] = temp;
@@ -48,12 +45,10 @@ int main() {
         left++;
         right--;
     }
-
     printf("\nFinal reversed array: ");
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
     printf("\n");
-
     return 0;
 }
