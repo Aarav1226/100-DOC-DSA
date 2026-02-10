@@ -1,33 +1,50 @@
-    /* Problem: Write a recursive function fib(n) to compute the n-th Fibonacci number where fib(0)=0 and fib(1)=1.
+    /*Problem: Read a string and check if it is a palindrome using two-pointer comparison.
 
 Input:
-- Single integer n
+- Single line: string s
 
 Output:
-- Print the n-th Fibonacci number
+- Print YES if palindrome, otherwise NO
 
 Example:
 Input:
-6
+level
 
 Output:
-8
+YES
 
-Explanation: Sequence: 0,1,1,2,3,5,8 at positions 0,1,2,3,4,5,6
-*/
+Explanation: String reads same forwards and backwards*/
+
 #include <stdio.h>
-
-int fib(int n) {
-    // Base cases
-    if (n <= 1) return n;
-    
-    // Recursive case
-    return fib(n - 1) + fib(n - 2);
-}
+#include <string.h>
 
 int main() {
-    int n;
-    scanf("%d", &n);
-    printf("%d\n", fib(n));
+    char s[1001]; // Buffer to store the string
+
+    // Read the input string
+    if (scanf("%s", s) == 1) {
+        int left = 0;
+        int right = strlen(s) - 1;
+        int isPalindrome = 1; // Flag: 1 represents true, 0 represents false
+
+        // Two-pointer loop
+        while (left < right) {
+            // Compare characters at both ends
+            if (s[left] != s[right]) {
+                isPalindrome = 0; // Mismatch found
+                break;
+            }
+            // Move pointers inward
+            left++;
+            right--;
+        }
+
+        if (isPalindrome) {
+            printf("YES");
+        } else {
+            printf("NO");
+        }
+    }
+
     return 0;
 }
