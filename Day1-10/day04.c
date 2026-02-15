@@ -30,7 +30,6 @@ int main() {
     }
 
     int left = 0, right = n - 1;
-
     printf("\nInitial array: ");
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);

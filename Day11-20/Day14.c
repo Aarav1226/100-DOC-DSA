@@ -53,6 +53,5 @@ int main() {
             printf("Not an Identity Matrix");
         }
     }
-
     return 0;
 }

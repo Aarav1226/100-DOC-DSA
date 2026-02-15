@@ -63,7 +63,6 @@ int main() {
                 scanf("%d", &a[i][j]);
             }
         }
-
         // A symmetric matrix must be square
         if (m != n) {
             printf("Not a Symmetric Matrix");

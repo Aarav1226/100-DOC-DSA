@@ -44,6 +44,5 @@ int main() {
         // Print the result
         printf("%d", sum);
     }
-
     return 0;
 }
